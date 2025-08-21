@@ -5,75 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <div>
-        <table>
-            <tr>
-                <td><input type="text" id="myResult"></td>
+<body font-family="Manrope">
+    <div class="" >
+        <table class="flex flex-col items-center justify-center mt-20 gap-4 font-bold text-4xl sm:text-2xl  ">
+            <tr class="border-2 border-gray-300 flex justify-between p-6 text-white bg-gray-900">
+                <td class="border-2 border-gray-300 "><input type="text" id="myResult" class="border-2 border-gray-300 h-30 "></td>
+            </tr>
+            <tr class="border-5  border-gray-300 flex gap-21 p-6 text-white bg-gray-900 ">
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="C" onclick="deleteMe()"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="(" onclick="calculator('(')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value=")" onclick="calculator(')')"></td>
+
             </tr>
 
-            <tr>
-                <td><input type="button" value="C" onclick="deleteMe()"></td>
-                <td><input type="button" value="(" onclick="calculator('(')"></td>
-                <td><input type="button" value=")" onclick="calculator(')')"></td>
+            <tr class="border-5 border-gray-300 flex justify-between p-6 text-white bg-gray-900">
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="7" onclick="calculator('7')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="8" onclick="calculator('8')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="9" onclick="calculator('9')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="+" onclick="calculator('+')"></td>
             </tr>
 
-            <tr>
-                <td><input type="button" value="7" onclick="calculator('7')"></td>
-                <td><input type="button" value="8" onclick="calculator('8')"></td>
-                <td><input type="button" value="9" onclick="calculator('9')"></td>
-                <td><input type="button" value="+" onclick="calculator('+')"></td>
+            <tr class="border-5 border-gray-300 flex justify-between p-6 text-white bg-gray-900">
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="4" onclick="calculator('4')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="5" onclick="calculator('5')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="6" onclick="calculator('6')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="-" onclick="calculator('-')"></td>
             </tr>
 
-            <tr>
-                <td><input type="button" value="4" onclick="calculator('4')"></td>
-                <td><input type="button" value="5" onclick="calculator('5')"></td>
-                <td><input type="button" value="6" onclick="calculator('6')"></td>
-                <td><input type="button" value="-" onclick="calculator('-')"></td>
+            <tr class="border-5 border-gray-300 flex justify-between p-6 text-white bg-gray-900">
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="1" onclick="calculator('1')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="2" onclick="calculator('2')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="3" onclick="calculator('3')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="*" onclick="calculator('*')"></td>
             </tr>
 
-            <tr>
-                <td><input type="button" value="1" onclick="calculator('1')"></td>
-                <td><input type="button" value="2" onclick="calculator('2')"></td>
-                <td><input type="button" value="3" onclick="calculator('3')"></td>
-                <td><input type="button" value="*" onclick="calculator('*')"></td>
-            </tr>
-
-            <tr>
-                <td><input type="button" value="0" onclick="calculator('0')"></td>
-                <td><input type="button" value="." onclick="calculator('.')"></td>
-                <td><input type="button" value="/" onclick="calculator('/')"></td>
-                <td><input type="button" value="=" onclick="answer()"></td>
+            <tr class="border-5 border-gray-300 flex justify-between p-6 text-white bg-gray-900">
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="0" onclick="calculator('0')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="." onclick="calculator('.')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="/" onclick="calculator('/')"></td>
+                <td class="border-5 h-15 w-15   flex justify-center bg-black border-gray-300"><input type="button" value="=" onclick="answer()"></td>
             </tr>
         </table>
     </div>
 
 
 
-    <script>
-        function deleteMe() {
-            document.getElementById("myResult").value = "";
-        }
-
-        function calculator(newValue) {
-            document.getElementById("myResult").value += newValue;
-        }
-
-        function answer () {
-            let result = document.getElementById("myResult").value;
-            if (result) {
-                try {
-                    document.getElementById("myResult").value = eval(result);
-                } catch (error) {
-                    document.getElementById("myResult").value = "Error";
-                }
-            } else {
-                document.getElementById("myResult").value = "Please enter a value";
-            }
-        }
-    </script>
+    <script src="./calculator dom/calculate.js"></script>
 </body>
 
 </html>
