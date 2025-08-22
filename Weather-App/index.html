@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-      <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-800">
-    <div class="card flex justify-center w-90 max-w-md mx-auto mt-10 px-10 py-9 bg-gradient-to-t from-[#00feba] to-[#5b548a] items-center  rounded-xl ">
+    <div
+        class="card grid justify-center sm:w-auto max-w-md mx-auto mt-10 px-10 py-9 bg-gradient-to-t from-[#5b548ad4] to-[#00febac9] items-center  rounded-xl">
+
         <div class="search w-max-md flex items-center justify-between ">
-            <input type="text" spellcheck="false" placeholder="enter the city name" class=" w-72 rounded-3xl px-3 h-12 flex-1 mr-4 text-base outline-0 bg-white">
-            <button class="flex justify-center items-center outline-0 bg-white w-14 h-14 rounded-full cursor-pointer"><img src="./images/search.png" alt="search" class="h-5"></button>
+            <input type="text" spellcheck="false" placeholder="enter the city name"
+                class=" w-72 rounded-3xl px-3 h-12  flex-1  mr-4 text-base outline-0 bg-white">
+            <button
+                class="flex justify-center items-center outline-0 bg-white w-14 h-14 rounded-full cursor-pointer"><img
+                    src="./images/search.png" alt="search" class="h-5"></button>
         </div>
 
+        <div class="weather flex flex-col items-center gap-6 text-white ">
+            <img src="./images/rain.png" class="weather-icon  w-44 mt-8">
+            <h1 class="temp text-7xl font-medium">22°C</h1>
+            <h2 class="city  text-5xl font-medium mt-[-10px]">Dhaka</h2>
+            <div class="details flex gap-6 p-1 mt-16">
+                <div class="col flex text-left">
+                    <img src="./images/humidity.png" class="w-[30%] mr-6">
+                    <div class="">
+                        <p class="humidity text-2xl">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="flex ">
+                    <img src="./images/wind.png" class="w-[30%] mr-6">
+                    <div class="">
+                        <p class="text-2xl">15 Km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
